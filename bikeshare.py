@@ -37,6 +37,9 @@ def get_day():
 def get_month():
     """
     Asks user to specify a month and checks if it is in the list 'months'
+    
+    note: the list 'months' only contains the first 6 months (january to june), because the provided
+          data only covers these months
 
     Returns:
         (str) xday - name of the weekday
