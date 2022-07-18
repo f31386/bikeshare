@@ -1,8 +1,10 @@
-### Date created
+### File history
  2022-05-24: bikeshare.py uploaded as 2nd Project 
              for Udacity Nanodegree 
              'Programming for Data Science with Python'
  2022-07-15: README.md
+ 2022-07-18: improved docstrings in bikeshare.py 
+ 2022-07-18: README.md updated
 
 ### Project Title
  EXPLORE US BIKESHARE DATA
