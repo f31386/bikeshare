@@ -3,12 +3,13 @@
 
 # 2nd Project for Udacity Nanodegree 'Programming for Data Science with Python'
 
-# created with Python 3.9.7, Numpy 1.20.3 and Pandas 1.3.4
+# created with Python 3.9.7, Numpy 1.20.3, Pandas 1.3.4 and tabulate 0.8.10
 # by Christian Schupp, ZF Friedrichshafen AG
 
 import time
 import pandas as pd
 import numpy as np
+from tabulate import tabulate
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -279,24 +280,13 @@ def raw_data(df):
     Args:
         df - df - Pandas DataFrame containing city data filtered by month and day
     """
-    show_data = True
-    line = 0
-    num_lines = df['Start Time'].count()
-    while show_data:
-        user_input = input('\nWould you like to see (the next) 5 lines of raw_data? Enter yes or no.\n').strip().lower()
-        if user_input != 'no':
-            if line > (num_lines - 5): # 5 or less lines left
-                show_data = False #exit while loop
-                print('\nLast five lines of raw data:')
-                line = num_lines - 5
-                
-            for n in range(5):
-                print('-'*40)
-                print(df.iloc[line, :-4])  # last four lines are no raw data
-                line += 1
-                
-        else: # user_input = 'no'
-            show_data = False
+    i = 0
+    while True:
+        display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+        if display_data.lower() != 'yes':
+            break
+        print(tabulate(df.iloc[np.arange(0+i, 5+i)], headers = "keys"))
+        i+=5
 
 def main():
     while True:
