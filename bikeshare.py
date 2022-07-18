@@ -153,6 +153,9 @@ def load_data(city, month, day):
 def time_stats(df):
     """
     Displays statistics on the most frequent times of travel.
+     - Most Common Month 
+     - Most Common Day of Week
+     - Most Common Start Hour
     
     Args:
         df - df - Pandas DataFrame containing city data filtered by month and day
@@ -181,6 +184,9 @@ def time_stats(df):
 def station_stats(df):
     """
     Displays statistics on the most popular stations and trip.
+     - Most Commonly Used Start Station
+     - Most Commonly Used End Station
+     - Most Frequent Combination of Start Station and End Station
     
     Args:
         df - df - Pandas DataFrame containing city data filtered by month and day
@@ -209,6 +215,8 @@ def station_stats(df):
 def trip_duration_stats(df):
     """
     Displays statistics on the total and average trip duration.
+     - Total Travel Time
+     - Mean Travel Time
     
     Args:
         df - df - Pandas DataFrame containing city data filtered by month and day
@@ -230,6 +238,9 @@ def trip_duration_stats(df):
 def user_stats(df):
     """
     Displays statistics on bikeshare users.
+     - Counts of user types
+     - Counts of gender
+     - Earliest, most recent an most common year of birth
     
     Args:
         df - df - Pandas DataFrame containing city data filtered by month and day
